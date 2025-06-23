@@ -1,17 +1,19 @@
 {
-  "build": {    "arduino": {
+  "build": {
+    "arduino": {
       "ldscript": "esp32s3_out.ld",
-      "partitions": "default_8MB.csv",
-      "memory_type": "qio_qspi"
+      "partitions": "default_16MB.csv",
+      "memory_type": "qio_opi"
     },
-    "core": "esp32",
-    "extra_flags": [
-      "'-D ARDUINO_ESP32S3_DEV'",
-      "'-D ARDUINO_USB_MODE=1'",
+    "core": "esp32",    "extra_flags": [
+      "'-D ESP32CAM_ESP32S3_N16R8_TYPEC'",
       "'-D BOARD_HAS_PSRAM'",
+      "'-D ARDUINO_USB_MODE=1'",
+      "'-D ARDUINO_USB_CDC_ON_BOOT=1'",
       "'-D ARDUINO_RUNNING_CORE=1'",
       "'-D ARDUINO_EVENT_RUNNING_CORE=1'",
-      "'-D ARDUINO_USB_CDC_ON_BOOT=1'",
+      "'-D CONFIG_ESP32S3_SPIRAM_SUPPORT=1'",
+      "'-D CONFIG_SPIRAM_MODE_OCT=1'",
       "'-D CAMERA_CONFIG_PIN_PWDN=GPIO_NUM_NC'",
       "'-D CAMERA_CONFIG_PIN_RESET=GPIO_NUM_NC'",
       "'-D CAMERA_CONFIG_PIN_XCLK=15'",
@@ -34,7 +36,8 @@
       "'-D CAMERA_CONFIG_FB_COUNT=2'",
       "'-D CAMERA_CONFIG_FB_LOCATION=CAMERA_FB_IN_PSRAM'",
       "'-D SCCB_I2C_PORT=I2C_NUM_0'"
-    ],    "f_cpu": "240000000L",
+    ],
+    "f_cpu": "240000000L",
     "f_flash": "80000000L",
     "flash_mode": "qio",
     "hwids": [
@@ -47,6 +50,7 @@
     "variant": "esp32s3"
   },
   "connectivity": [
+    "bluetooth",
     "wifi"
   ],
   "debug": {
@@ -56,14 +60,14 @@
     "arduino",
     "espidf"
   ],
-  "name": "ESP32 FREENOVE S3 WROOM",
+  "name": "ESP32-S3-N16R8 Type-C Camera",
   "upload": {
-    "flash_size": "4MB",
+    "flash_size": "16MB",
     "maximum_ram_size": 327680,
-    "maximum_size": 4194304,
+    "maximum_size": 16777216,
     "require_upload_port": true,
-    "speed": 460800
+    "speed": 921600
   },
-  "url": "https://github.com/Freenove/Freenove_ESP32_S3_WROOM_Board",
-  "vendor": "Freenove"
+  "url": "https://dientutuyetnga.com/products/esp32-cam-kit-phat-trien-esp32-s3-n16r8-typec",
+  "vendor": "Generic ESP32-S3"
 }

@@ -210,21 +210,21 @@ Initially there is no password present.
 
 After connecting, the browser should automatically open the status page.
 In case this does not happens automatically, connect to [http://192.168.4.1](http://192.168.4.1).
-This page will display the current settings and status. On the bottom, there is a link to the config. Click on this link.
+This page will display the current settings and status. On the bottom, there is a link to the config. Click 
 
 This link brings up the configuration screen when connecting fot the first time.
 
-![Configuration screen](assets/Configuration.png)
+![Configuration screen](assets/Configuration.png)on this link.
 
 Configure at least:
 
-- The access point to connect to. No dropdown is present to show available networks!
+- Thect to. No dropdown is present to show available networks!
 - A password for accessing the Access point (AP) when starting. (required)
 - Type of the ESP32-CAM board
 
 When finished press ```Apply``` to save the configuration. The screen will redirect to the status screen.
 Here it is possible to reboot the device so the settings take effect.
-It is also possible to restart manually by pressing the reset button.
+It is also possible to resta access point to connert manually by pressing the reset button.
 
 ## Connecting to the configuration
 
